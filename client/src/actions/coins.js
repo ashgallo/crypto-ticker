@@ -20,7 +20,7 @@ export const getCoins = () => {
 
 //add will have a single coin in the payload
 //pass in paramenter in ()
-export const addCoins = (coin) => {
+export const addCoin = (coin) => {
   return (dispatch) => {
     axios.post('/api/coins', { coin })
       .then( ({ data: coin, headers }) => 
@@ -30,7 +30,7 @@ export const addCoins = (coin) => {
 }
 
 //remove will have a single id in the payload
-export const removeCoins = (id) => {
+export const removeCoin = (id) => {
   return (dispatch) => {
     axios.put(`/api/coins/${id}`)
       .then( ({ headers }) => 
